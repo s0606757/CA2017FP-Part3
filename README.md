@@ -72,17 +72,18 @@ PS：convLayerGPU_XXX_execTime includes : only execution time.
 &nbsp;&nbsp;&nbsp;    The fastest one will get 30% and the last one will get 1%<br/>
 
 ## Other Rules
-* It’s a team work, 1 ~ 4 people in one team <br/>
+* It’s a team work, 1 ~ 6 people in one team <br/>
    - Register (**Please reedit!**)[here](https://docs.google.com/spreadsheets/d/1pTu70p91DqzbtLaKE4OWdUmqs7FS-8vAtqs0gH41xcY/edit?usp=sharing) before deadline.<br/>
 * [Account list](https://docs.google.com/spreadsheets/d/1hLfJjv58QsXRwLlma45IflcpicqlQFgYiKp77vlJokk/edit#gid=0)
 * Compress following files into one zip file **LeaderID_FP3.zip** **(ex：066066_FP3.zip)** and upload to E3.<br/>
-* Name your report as：**LeaderID_Report_FP2.pdf**<br/>
-* Name your package as： **LeaderID_FP2.zip**<br/>
+* (a) LeaderID_Report_FP3.pdf <br/>
+* (b) CNNConvLayer.cu and CNNConvLayer.h <br/>
+* (c) Makefile and ./data  <br/>
 * One team only need to upload **one** package to E3.<br/>
 * Make sure TA can compile and run your code with “make” and “make run” on the provided server.<br/>
 * **Any CUDA library is forbidden to use in this project !!!** <br/>
 * **DELAY IS NOT ACCEPTABLE !!!** <br/>
-* **Due day：2017/11/30(Thr) 23:50** <br/>
+* **Due day：2017/01/16(Tue) 23:50** <br/>
 
 ## Useful Reference
 * Neural Network Pruning [Here](https://arxiv.org/pdf/1506.02626.pdf)
