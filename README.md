@@ -58,10 +58,15 @@ PS：convLayerGPU_XXX_execTime includes : only execution time.
 &nbsp;    Your result(convLayerGPU_Your) must be correct (Pass the check) (10%)<br/>
 &nbsp;&nbsp;&nbsp;    Your design(convLayerGPU_Your) is faster than convLayerGPU_TA (10%)<br/>
 **(B) Report (40%)**<br/>
-&nbsp;&nbsp;&nbsp;    Describe your implementation algorithm and explain your results (15%)<br/>
-&nbsp;&nbsp;&nbsp;    Discuss what kind of optimization you did( it is better or worse?) (10%)<br/>
-&nbsp;&nbsp;&nbsp;    Show how you use NVVP to help you find and solve perf. issues (5%)<br/>
-&nbsp;&nbsp;&nbsp;    Feedback of this part (5%)<br/>
+&nbsp;&nbsp;&nbsp;    1.	Algorithm (10%) <br/>
+&nbsp;&nbsp;&nbsp;    2.	How do you (10%)<br/>
+&nbsp;&nbsp;&nbsp;    - increase data reuse<br/>
+&nbsp;&nbsp;&nbsp;    - reduce branch divergence or increase memory coalescing<br/>
+&nbsp;&nbsp;&nbsp;    - implement other optimization <br/>
+&nbsp;&nbsp;&nbsp;    3.	Comparing part 3 with part 2 , do you get speedup? why or why not?(10%) <br/>
+&nbsp;&nbsp;&nbsp;    4.	Show how you use NVVP to help you find and solve perf(5%) <br/>
+&nbsp;&nbsp;&nbsp;    5.	Feedback(5%) <br/>
+
 **(C) Performance Rank (30%)**<br/>
 &nbsp;&nbsp;&nbsp;    We will rank your CUDA kernels’ performance(execution time) on GTX K20C<br/>
 &nbsp;&nbsp;&nbsp;    The fastest one will get 30% and the last one will get 1%<br/>
