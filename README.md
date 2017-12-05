@@ -86,9 +86,9 @@ PS：convLayerGPU_XXX_execTime includes : only execution time.
 * **Due day：2017/01/16(Tue) 23:50** <br/>
 
 ## Hints
-**1. Data reuse can reduce the times of reloading data from global memory to shared memory.<br/>
-**2. Reduce branches can reduce control divergence that causes some threads to stall.<br/>
-**3. Memory coalescing can efficiently access memory.<br/>
+*1. Data reuse can reduce the times of reloading data from global memory to shared memory.<br/>
+*2. Reduce branches can reduce control divergence that causes some threads to stall.<br/>
+*3. Memory coalescing can efficiently access memory.<br/>
 
 
 
