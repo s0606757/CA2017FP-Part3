@@ -12,13 +12,14 @@ git clone https://github.com/s0606757/CA2017FP-Part3.git
 
 ### ./data
 This directory contains the input data for the base program：
-*./data/filter.txt storing irregular dense filters’ values (sparsity=78%)
-*./data/neuron.txt storing irregular dense neuron’ values(sparsity=78%)
-*./data/filter_COO_irregular.txt storing irregular sparse filters’ values (sparsity=78%)
-*./data/neuron_COO_ irregular.txt storing irregular sparse neuron’ values(sparsity=78%)
-*./data/filter_COO_regular.txt storing sparse filters’ values(sparsity=78%)
-*./data/neuron_COO_ regular.txt storing sparse neuron’ values(sparsity=78%)
-TA will test your code with filter_COO_irregular.txt and neuron_COO_ irregular.txt (or you can use other sparse format and please compress the data into zip file)
+* ./data/filter.txt storing irregular dense filters (sparsity=78%)
+* ./data/neuron.txt storing irregular dense neuron (sparsity=78%)
+* ./data/filter_COO_irregular.txt storing irregular sparse filters (sparsity=78%)
+* ./data/neuron_COO_ irregular.txt storing irregular sparse neuron (sparsity=78%)
+* ./data/filter_COO_regular.txt storing sparse filters (sparsity=78%)
+* ./data/neuron_COO_ regular.txt storing sparse neuron (sparsity=78%)
+
+* TA will test your code with filter_COO_irregular.txt and neuron_COO_ irregular.txt (or you can use other sparse format and please compress the data into zip file)
 
 
 ### ./device
