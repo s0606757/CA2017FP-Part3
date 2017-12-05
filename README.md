@@ -63,9 +63,9 @@ PS：convLayerGPU_XXX_execTime includes : only execution time.
 &nbsp;&nbsp;&nbsp;&nbsp;      - increase data reuse<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;     - reduce branch divergence or increase memory coalescing<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;      - implement other optimization <br/>
-&nbsp;&nbsp;&nbsp;    3.	Comparing part 3 with part 2 , do you get speedup? why or why not?(10%)<br/>
-&nbsp;&nbsp;&nbsp;    4.	Show how you use NVVP to help you find and solve perf(5%)<br/>
-&nbsp;&nbsp;&nbsp;    5.	Feedback(5%)<br/>
+&nbsp;&nbsp;    3.	Comparing part 3 with part 2 , do you get speedup? why or why not?(10%)<br/>
+&nbsp;&nbsp;    4.	Show how you use NVVP to help you find and solve perf(5%)<br/>
+&nbsp;&nbsp;    5.	Feedback(5%)<br/>
 
 **(C) Performance Rank (30%)**<br/>
 &nbsp;&nbsp;&nbsp;    We will rank your CUDA kernels’ performance(execution time) on GTX K20C<br/>
