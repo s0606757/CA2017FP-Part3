@@ -76,18 +76,23 @@ PS：convLayerGPU_XXX_execTime includes : only execution time.
    - Register (**Please reedit!**)[here](https://docs.google.com/spreadsheets/d/1pTu70p91DqzbtLaKE4OWdUmqs7FS-8vAtqs0gH41xcY/edit?usp=sharing) before deadline.<br/>
 * [Account list](https://docs.google.com/spreadsheets/d/1hLfJjv58QsXRwLlma45IflcpicqlQFgYiKp77vlJokk/edit#gid=0)
 * Compress following files into one zip file **LeaderID_FP3.zip** **(ex：066066_FP3.zip)** and upload to E3.<br/>
-* (a) LeaderID_Report_FP3.pdf <br/>
-* (b) CNNConvLayer.cu and CNNConvLayer.h <br/>
-* (c) Makefile and ./data  <br/>
+&nbsp;(a) LeaderID_Report_FP3.pdf <br/>
+&nbsp;(b) CNNConvLayer.cu and CNNConvLayer.h <br/>
+&nbsp;(c) Makefile and ./data  <br/>
 * One team only need to upload **one** package to E3.<br/>
 * Make sure TA can compile and run your code with “make” and “make run” on the provided server.<br/>
 * **Any CUDA library is forbidden to use in this project !!!** <br/>
 * **DELAY IS NOT ACCEPTABLE !!!** <br/>
 * **Due day：2017/01/16(Tue) 23:50** <br/>
 
+## Hints
+**1. Data reuse can reduce the times of reloading data from global memory to shared memory.
+**2. Reduce branches can reduce control divergence that causes some threads to stall.
+**3. Memory coalescing can efficiently access memory.
+
+
+
 ## Useful Reference
-* Neural Network Pruning [Here](https://arxiv.org/pdf/1506.02626.pdf)
-* Sparsity in Neurons [Here](http://www.ece.ubc.ca/~aamodt/papers/Cnvlutin.ISCA2016.pdf)
 * Sparse Foramat in Matrix Multiplication [Here](https://pdfs.semanticscholar.org/9abb/086fabdcd2853ed8303c0f9a62cf4b917a62.pdf)
 * Implement Sparse Matrix Multiplication with CUDA [Here](http://wnbell.com/media/2008-12-NVR-SpMV/nvr-2008-004.pdf)
 * An Accelerator for Sparse CNN [Here](http://people.csail.mit.edu/anurag_m/papers/2017.scnn.isca.pdf)
