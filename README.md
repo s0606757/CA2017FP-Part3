@@ -95,7 +95,11 @@ PS：convLayerGPU_XXX_execTime includes : only execution time.
 ## Useful Reference
 * Sparse Foramat in Matrix Multiplication [Here](https://pdfs.semanticscholar.org/9abb/086fabdcd2853ed8303c0f9a62cf4b917a62.pdf)
 * Implement Sparse Matrix Multiplication with CUDA [Here](http://wnbell.com/media/2008-12-NVR-SpMV/nvr-2008-004.pdf)
-* An Accelerator for Sparse CNN [Here](http://people.csail.mit.edu/anurag_m/papers/2017.scnn.isca.pdf)
 * Sparse Format - Nvidia [Here](https://drive.google.com/file/d/0B-mvsV4UBCFFbEhpMzFIbUVLVGs/view?usp=sharing )
+* Cuda Debugging Command Line [Here](https://drive.google.com/file/d/0B-mvsV4UBCFFZ24yeG96TEFVa0k/view?usp=sharing)
+* Cuda Dynamic Parallel[Here](https://drive.google.com/file/d/1H6xil5mKAYD-dLcHfIdM_8kbB8qhbV5_/view?usp=sharing)
+* Branch Divergence[Here](https://drive.google.com/open?id=1A6X4uMsPXbCCw-UdlnvSyod4V86LuNit)
+* Memory Coalescing[Here](https://drive.google.com/file/d/1EqfvyZkikzhQOtqo-RBNd_SxUA7ewMNH/view?usp=sharing)
+
 
 
