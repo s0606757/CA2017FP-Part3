@@ -73,9 +73,9 @@ PS：convLayerGPU_XXX_execTime includes : only execution time.
 
 ## Other Rules
 * It’s a team work, 1 ~ 4 people in one team <br/>
-   - Register (**Please reedit!**)[here](https://docs.google.com/spreadsheets/d/1cSKtAuxRwu-y8bwys1Dka8hY58U_clqU0l4W81Cis3Y/edit?usp=sharing) before deadline.<br/>
+   - Register (**Please reedit!**)[here](https://docs.google.com/spreadsheets/d/1pTu70p91DqzbtLaKE4OWdUmqs7FS-8vAtqs0gH41xcY/edit?usp=sharing) before deadline.<br/>
 * [Account list](https://docs.google.com/spreadsheets/d/1hLfJjv58QsXRwLlma45IflcpicqlQFgYiKp77vlJokk/edit#gid=0)
-* Compress your **code** and **report** into one zip file and upload to E3.<br/>
+* Compress following files into one zip file **LeaderID_FP3.zip (ex：066066_FP3.zip)**and upload to E3.<br/>
 * Name your report as：**LeaderID_Report_FP2.pdf**<br/>
 * Name your package as： **LeaderID_FP2.zip**<br/>
 * One team only need to upload **one** package to E3.<br/>
