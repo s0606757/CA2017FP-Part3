@@ -87,7 +87,7 @@ PS：convLayerGPU_XXX_execTime includes : only execution time.
 
 ## Hints
 1. Data reuse can reduce the times of reloading data from global memory to shared memory.<br/>
-2. Reduce branches can reduce control divergence that causes some threads to stall.<br/>
+2. Reducing branches can reduce control divergence that causes some threads to stall.<br/>
 3. Memory coalescing can efficiently access memory.<br/>
 
 
@@ -97,9 +97,9 @@ PS：convLayerGPU_XXX_execTime includes : only execution time.
 * Implement Sparse Matrix Multiplication with CUDA [Here](http://wnbell.com/media/2008-12-NVR-SpMV/nvr-2008-004.pdf)
 * Sparse Format - Nvidia [Here](https://drive.google.com/file/d/0B-mvsV4UBCFFbEhpMzFIbUVLVGs/view?usp=sharing )
 * Cuda Debugging Command Line [Here](https://drive.google.com/file/d/0B-mvsV4UBCFFZ24yeG96TEFVa0k/view?usp=sharing)
-* Cuda Dynamic Parallel[Here](https://drive.google.com/file/d/1H6xil5mKAYD-dLcHfIdM_8kbB8qhbV5_/view?usp=sharing)
-* Branch Divergence[Here](https://drive.google.com/open?id=1A6X4uMsPXbCCw-UdlnvSyod4V86LuNit)
-* Memory Coalescing[Here](https://drive.google.com/file/d/1EqfvyZkikzhQOtqo-RBNd_SxUA7ewMNH/view?usp=sharing)
+* Cuda Dynamic Parallel [Here](https://drive.google.com/file/d/1H6xil5mKAYD-dLcHfIdM_8kbB8qhbV5_/view?usp=sharing)
+* Branch Divergence [Here](https://drive.google.com/open?id=1A6X4uMsPXbCCw-UdlnvSyod4V86LuNit)
+* Memory Coalescing [Here](https://drive.google.com/file/d/1EqfvyZkikzhQOtqo-RBNd_SxUA7ewMNH/view?usp=sharing)
 
 
 
