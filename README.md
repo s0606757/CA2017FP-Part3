@@ -1,19 +1,25 @@
-# NCTU 2017 Computer Architecture Final Project - Part 2
+# NCTU 2017 Computer Architecture Final Project - Part 3
 
-**Part-2：Implement sparse convolution , relu , and maxpooling in convLayerGPU() with CUDA and store your result in the outGPU and use NVVP to analyze your code.**
+**Part-3：Speedup irregular sparse convolution.**
 
 ## Download
 At command line type:
 <pre>
-git clone https://github.com/s0606757/CA2017FP-Part2.git
+git clone https://github.com/s0606757/CA2017FP-Part3.git
 </pre>
 
 ## Three sub-directory
 
 ### ./data
 This directory contains the input data for the base program：
-* . /data/filter_COO.txt - Store the values of sparse filters
-* . /data/neuron_COO.txt - Store the values of sparse neurons
+*./data/filter.txt storing irregular dense filters’ values (sparsity=78%)
+*./data/neuron.txt storing irregular dense neuron’ values(sparsity=78%)
+*./data/filter_COO_irregular.txt storing irregular sparse filters’ values (sparsity=78%)
+*./data/neuron_COO_ irregular.txt storing irregular sparse neuron’ values(sparsity=78%)
+*./data/filter_COO_regular.txt storing sparse filters’ values(sparsity=78%)
+*./data/neuron_COO_ regular.txt storing sparse neuron’ values(sparsity=78%)
+TA will test your code with filter_COO_irregular.txt and neuron_COO_ irregular.txt (or you can use other sparse format and please compress the data into zip file)
+
 
 ### ./device
 The program under this directory can show the device information.
