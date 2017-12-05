@@ -60,9 +60,9 @@ PS：convLayerGPU_XXX_execTime includes : only execution time.
 **(B) Report (40%)**<br/>
 &nbsp;     1.	Algorithm (10%) <br/>
 &nbsp;&nbsp;&nbsp;    2.	How do you (10%)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;      - increase data reuse<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;     - reduce branch divergence or increase memory coalescing<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;      - implement other optimization <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       - increase data reuse<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      - reduce branch divergence or increase memory coalescing<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      - implement other optimization <br/>
 &nbsp;&nbsp;    3.	Comparing part 3 with part 2 , do you get speedup? why or why not?(10%)<br/>
 &nbsp;    4.	Show how you use NVVP to help you find and solve perf(5%)<br/>
 &nbsp;    5.	Feedback(5%)<br/>
