@@ -32,16 +32,10 @@ make run
 </pre>
 
 ### ./example
-There are two examples(InnerProduct and Matrix Multiplication) under this directory.
+There is one example(InnerProduct) under this directory.
 #### usage
 <pre>
 cd ./example/InnerProduct/
-make
-make run
-
-or
-
-cd ./example/MatrixMultiplication/
 make
 make run
 </pre>
@@ -55,17 +49,15 @@ make run
 ## Evaluation
 We will compare the execution time to get the speedup by
 <pre>
-Speedup = convLayerCPU_execTime / convLayerGPU_execTime
-PS：convLayerGPU_execTime includes : cudaMalloc time 、cudaMemcpy time and execution time. 
-Please  put these functions between clock_gettime(CLOCK_REALTIME, &time_begin) between clock_gettime(CLOCK_REALTIME, &time_end)
+Speedup = convLayerGPU_TA_execTime  / convLayerGPU_Your_execTime
+PS：convLayerGPU_XXX_execTime includes : only execution time.
 </pre>
 
 ## Grading Policy
-**(A) Completeness (35%)**<br/>
-&nbsp;    Your result(convLayerGPU) must be correct (Pass the check) (10%)<br/>
-&nbsp;&nbsp;&nbsp;    Your design(convLayerGPU) is faster than convLayerCPU() (15%)<br/>
-&nbsp;&nbsp;&nbsp;   Use your data format(10%) <br/>
-**(B) Report (35%)**<br/>
+**(A) Completeness (20%)**<br/>
+&nbsp;    Your result(convLayerGPU_Your) must be correct (Pass the check) (10%)<br/>
+&nbsp;&nbsp;&nbsp;    Your design(convLayerGPU_Your) is faster than convLayerGPU_TA (10%)<br/>
+**(B) Report (40%)**<br/>
 &nbsp;&nbsp;&nbsp;    Describe your implementation algorithm and explain your results (15%)<br/>
 &nbsp;&nbsp;&nbsp;    Discuss what kind of optimization you did( it is better or worse?) (10%)<br/>
 &nbsp;&nbsp;&nbsp;    Show how you use NVVP to help you find and solve perf. issues (5%)<br/>
