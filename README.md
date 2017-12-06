@@ -1,6 +1,6 @@
 # NCTU 2017 Computer Architecture Final Project - Part 3
 
-**Part-3：Speedup irregular sparse convolution.**
+**Part-3：Speedup Irregular Sparse Convolution.**
 
 ## Download
 At command line type:
