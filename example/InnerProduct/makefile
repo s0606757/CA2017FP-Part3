@@ -16,4 +16,3 @@ run:
 	./$(TARGET2)
 
 
-#nvcc test.cu ¡Vo test ¡Varch=sm_35 ¡Vrdc=true -lcudadevrt
