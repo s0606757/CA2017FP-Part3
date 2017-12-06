@@ -9,6 +9,8 @@ git clone https://github.com/s0606757/CA2017FP-Part3.git
 </pre>
 
 ## Three sub-directory
+### ./CNNConvLayer_TA
+This is the baseline written by TA. The execution time is about **1300ms** with Tesla K20c. Your design must be faster than TA.
 
 ### ./data
 This directory contains the input data for the base program：
