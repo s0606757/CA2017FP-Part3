@@ -53,6 +53,7 @@ We will compare the execution time to get the speedup by
 <pre>
 Speedup = convLayerGPU_TA_execTime  / convLayerGPU_Your_execTime
 PS：convLayerGPU_XXX_execTime includes : only execution time.
+(convLayerGPU_TA_execTime=1300ms)
 </pre>
 
 ## Grading Policy
