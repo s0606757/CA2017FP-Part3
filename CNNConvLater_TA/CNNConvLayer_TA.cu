@@ -93,10 +93,12 @@ void convLayerGPU(int *inNeu , int *filt , int *outNeu)
 	int fmArea = FMSIZE *FMSIZE;
     int total_sum;
 	__shared__ int sum[FMDEPTH];
+	int tile;
 	
 	sli=threadIdx.x;
-		
-	for(fn = 0; fn < FILTNUM; fn++){
+	tile=128*blockIdx.x;
+	
+	for(fn = 0; fn < FILTNUM/2; fn++){
 		for(fmy = 0; fmy < FMSIZE; fmy += STRIDE){
 			for(fmx = 0; fmx < FMSIZE; fmx += STRIDE){
 				sum[sli] = 0;
@@ -104,7 +106,7 @@ void convLayerGPU(int *inNeu , int *filt , int *outNeu)
 					for(x = 0; x < FILTSIZE; x++){
 						ifmy = fmy - FILTSIZE / 2 + y;
 						ifmx = fmx - FILTSIZE / 2 + x;
-						filtIdx = fn*filtVol + sli*filtArea + y*FILTSIZE + x;
+						filtIdx = (fn+tile)*filtVol + sli*filtArea + y*FILTSIZE + x;
 						inNeuIdx = sli*fmArea + ifmy*FMSIZE + ifmx;
 						
 						if(ifmy >= 0 && ifmy < FMSIZE && ifmx >= 0 && ifmx < FMSIZE){
@@ -123,7 +125,7 @@ void convLayerGPU(int *inNeu , int *filt , int *outNeu)
 					for(p=0;p<FMDEPTH;p++)
 						total_sum=total_sum+sum[p];
 					
-					outNeuIdx = fn*fmArea + fmy*FMSIZE + fmx;
+					outNeuIdx = (fn+tile)*fmArea + fmy*FMSIZE + fmx;
 					if(total_sum <= 0)
 						outNeu[outNeuIdx] = 0;
 					else
@@ -180,7 +182,7 @@ int main()
 	cout << "CPU time for executing a typical convolutional layer = " <<  convLayerCPUExecTime / 1000 << "ms" << endl;
 
   	clock_gettime(CLOCK_REALTIME, &time_begin);
-	convLayerGPU<<<1,FMDEPTH>>>(devInputA,devInputB,convOut); 
+	convLayerGPU<<<2,FMDEPTH>>>(devInputA,devInputB,convOut); 
 	cudaDeviceSynchronize(); 
 	dim3 threadsPerBlock_pool(FMSIZE/2,FMSIZE/2);
 	dim3 numBlocks_pool(FILTNUM,1);
