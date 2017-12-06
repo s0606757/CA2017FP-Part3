@@ -82,13 +82,8 @@ int main()
 	initCoo();
 
 	//Convolution by CPU                                                
-	clock_gettime(CLOCK_REALTIME, &time_begin);
 	convLayerCPU();
-	clock_gettime(CLOCK_REALTIME, &time_end);
-	convLayerCPUExecTime = timespec_diff_us(time_begin, time_end);
-	cout << "CPU time for executing a typical convolutional layer = "  <<  ((float)convLayerCPUExecTime)/1000 << "ms" << endl;
-
-  
+	
 	//Convolution by GPU   
 	clock_gettime(CLOCK_REALTIME, &time_begin);
 	/***	Lunch your CUDA Kernel here	***/
@@ -101,10 +96,8 @@ int main()
 
 	
 	//check the anser from CPU and from GPU
-	if(checker()){
+	if(checker())
 		cout << "Congratulations! You pass the check." << endl;
-		cout << "Speedup: " << (float)convLayerCPUExecTime / convLayerGPUExecTime << endl;
-	}
 	else
 		cout << "Sorry! Your result is wrong." << endl;
 
