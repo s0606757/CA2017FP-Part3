@@ -44,7 +44,7 @@ void init()
 	int outVol = FILTNUM * FMSIZE/2 * FMSIZE/2;
 	
 	inNeu = new int[FMSIZE*FMSIZE*FMDEPTH]();
-	ifs.open("data/neuron.txt", ifstream::in);
+	ifs.open("../data/neuron.txt", ifstream::in);
 	if(!ifs.is_open()){
 		cout << "Can not open the neurons input file\n";
 	}
@@ -63,7 +63,7 @@ void init()
 				
 		
 	filt = new int[FILTSIZE*FILTSIZE*FMDEPTH*FILTNUM]();
-	ifs.open("data/filter.txt", ifstream::in);
+	ifs.open("../data/filter.txt", ifstream::in);
 	if(!ifs.is_open()){
 		cout << "Can not open the filters input file\n";
 	}
@@ -85,8 +85,7 @@ void init()
 	outNeu = new int[outNeuVol]();
 	outCPU = new int[outVol]();
 	outGPU = new int[outVol]();
-	// outCPU = new int[outNeuVol]();
-	// outGPU = new int[outNeuVol]();
+
 
 }
 
@@ -283,8 +282,8 @@ void ending()
 }
 
 bool checker(){
+
 	int outVol = FILTNUM * FMSIZE/2 * FMSIZE/2;
-	// for(int i = 0; i < 7000; i++){ 
 	for(int i = 0; i < outVol; i++){ 
 		if(  outCPU[i] != outGPU[i]   ){
 			cout << "The element: " << i << " is wrong!\n";
