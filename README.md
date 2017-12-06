@@ -57,9 +57,9 @@ PS：convLayerGPU_XXX_execTime includes : only execution time.
 </pre>
 
 ## Grading Policy
-**(A) Completeness (20%)**<br/>
-&nbsp;    Your result(convLayerGPU_Your) must be correct (Pass the check) (10%)<br/>
-&nbsp;&nbsp;&nbsp;    Your design(convLayerGPU_Your) is faster than convLayerGPU_TA (10%)<br/>
+**(A) Completeness (30%)**<br/>
+&nbsp;    Your result(convLayerGPU_Your) must be correct (Pass the check) (15%)<br/>
+&nbsp;&nbsp;&nbsp;    Your design(convLayerGPU_Your) is faster than convLayerGPU_TA (15%)<br/>
 **(B) Report (40%)**<br/>
 &nbsp;     1.	Algorithm (10%) <br/>
 &nbsp;&nbsp;&nbsp;    2.	How do you (10%)<br/>
