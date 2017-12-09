@@ -4,7 +4,7 @@
 #include <string>
 using namespace std;
 
-#define FMSIZE 13
+#define FMSIZE 28
 #define FMDEPTH 192
 #define FILTSIZE 3
 #define FILTNUM 256
