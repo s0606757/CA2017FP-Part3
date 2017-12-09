@@ -1,6 +1,6 @@
 # NCTU 2017 Computer Architecture Final Project - Part 3
 
-**Part-3：Speedup irregular sparse convolution.**
+**Part-3：Speedup Irregular Sparse Convolution.**
 
 ## Download
 At command line type:
@@ -8,7 +8,9 @@ At command line type:
 git clone https://github.com/s0606757/CA2017FP-Part3.git
 </pre>
 
-## Three sub-directory
+## Four sub-directories
+### ./CNNConvLayer_TA
+This is the baseline written by TA. The execution time is about **1300ms** with Tesla K20c. Your design must be faster than TA.
 
 ### ./data
 This directory contains the input data for the base program：
@@ -51,12 +53,13 @@ We will compare the execution time to get the speedup by
 <pre>
 Speedup = convLayerGPU_TA_execTime  / convLayerGPU_Your_execTime
 PS：convLayerGPU_XXX_execTime includes : only execution time.
+(convLayerGPU_TA_execTime=1300ms)
 </pre>
 
 ## Grading Policy
-**(A) Completeness (20%)**<br/>
-&nbsp;    Your result(convLayerGPU_Your) must be correct (Pass the check) (10%)<br/>
-&nbsp;&nbsp;&nbsp;    Your design(convLayerGPU_Your) is faster than convLayerGPU_TA (10%)<br/>
+**(A) Completeness (30%)**<br/>
+&nbsp;    Your result(convLayerGPU_Your) must be correct (Pass the check) (15%)<br/>
+&nbsp;&nbsp;&nbsp;    Your design(convLayerGPU_Your) is faster than convLayerGPU_TA (15%)<br/>
 **(B) Report (40%)**<br/>
 &nbsp;     1.	Algorithm (10%) <br/>
 &nbsp;&nbsp;&nbsp;    2.	How do you (10%)<br/>
@@ -89,6 +92,7 @@ PS：convLayerGPU_XXX_execTime includes : only execution time.
 1. Data reuse can reduce the times of reloading data from global memory to shared memory.<br/>
 2. Reducing branches can reduce control divergence that causes some threads to stall.<br/>
 3. Memory coalescing can efficiently access memory.<br/>
+4. Cuda dynamic parallel maybe have some helps. **In this Part, You can implement "any idea" to speed up irregular sparse convolution.** Cuda dynamic parallel is not the only approach.
 
 
 
