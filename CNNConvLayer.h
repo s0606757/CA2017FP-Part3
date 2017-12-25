@@ -139,6 +139,11 @@ void initCoo()
 				memcpy(filtCooData,tmp_filtCooData,sizeof(int)*current_nnz);
 				memcpy(filtCooRow,tmp_filtCooRow,sizeof(int)*current_nnz);
 				memcpy(filtCooCol,tmp_filtCooCol,sizeof(int)*current_nnz);
+				
+				
+				delete [] tmp_filtCooData;
+				delete [] tmp_filtCooRow;
+				delete [] tmp_filtCooCol;
 			}
 			
 			ifs >> str ;
@@ -215,6 +220,10 @@ void initCoo()
 				memcpy(inNeuCooData , tmp_inNeuCooData ,sizeof(int)*current_nnz);
 				memcpy(inNeuCooRow  , tmp_inNeuCooRow  ,sizeof(int)*current_nnz);
 				memcpy(inNeuCooCol  , tmp_inNeuCooCol  ,sizeof(int)*current_nnz);
+				
+				delete [] tmp_inNeuCooData;
+				delete [] tmp_inNeuCooRow;
+				delete [] tmp_inNeuCooCol;
 		}
 
 		ifs >> str;
@@ -266,17 +275,13 @@ void ending()
 	delete [] filtCooData;
 	delete [] filtCooRow;
 	delete [] filtCooCol;
-	delete [] tmp_filtCooData;
-	delete [] tmp_filtCooRow;
-	delete [] tmp_filtCooCol;
+
 
 	delete [] inNeuCooNNZ;
 	delete [] inNeuCooData;
 	delete [] inNeuCooRow;
 	delete [] inNeuCooCol;
-	delete [] tmp_inNeuCooData;
-	delete [] tmp_inNeuCooRow;
-	delete [] tmp_inNeuCooCol;
+
 	
 }
 
