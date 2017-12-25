@@ -98,7 +98,7 @@ void initCoo()
 
 	filtCooNNZ = new int [FILTNUM*FMDEPTH];
 
-	ifs.open("data/filter_COO.txt", ifstream::in);
+	ifs.open("data/filt_COO_irregular.txt", ifstream::in);
 	if(!ifs.is_open()){
 		cout << "Can not open the filters input file\n";
 		exit(-1);
@@ -180,7 +180,7 @@ void initCoo()
 	current_nnz=0;
 	inNeuCooNNZ = new int [FMDEPTH];
 
-	ifs.open("data/neuron_COO.txt", ifstream::in);
+	ifs.open("data/neuron_COO_irregular.txt", ifstream::in);
 	if(!ifs.is_open()){
 		cout << "Can not open the neurons input file\n";
 		exit(-1);
