@@ -4,6 +4,8 @@
 #include <string>
 using namespace std;
 
+//important note：In this part, maxpooling is 2x2 
+
 #define FMSIZE 28
 #define FMDEPTH 192
 #define FILTSIZE 3
@@ -41,7 +43,7 @@ void init()
 	int inNeuIdx, filtIdx;
 	int tmp;
 	int outNeuVol = FILTNUM * FMSIZE * FMSIZE;
-	int outVol = FILTNUM * FMSIZE/3 * FMSIZE/3;
+	int outVol = FILTNUM * FMSIZE/2 * FMSIZE/2;
 	
 	inNeu = new int[FMSIZE*FMSIZE*FMDEPTH]();
 	ifs.open("data/neuron.txt", ifstream::in);
@@ -286,7 +288,7 @@ void ending()
 }
 
 bool checker(){
-	int outVol = FILTNUM * FMSIZE/3 * FMSIZE/3;
+	int outVol = FILTNUM * FMSIZE/2 * FMSIZE/2;
 
 	for(int i = 0; i < outVol; i++){ 
 		if(  outCPU[i] != outGPU[i]   ){

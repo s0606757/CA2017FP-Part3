@@ -13,7 +13,7 @@ void convLayerCPU()
 	int filtVol  = FMDEPTH  * FILTSIZE * FILTSIZE;
 	int fmArea   = FMSIZE   * FMSIZE;
 	int filtArea = FILTSIZE * FILTSIZE;
-	int outArea  = FMSIZE/3 * FMSIZE/3;
+	int outArea  = FMSIZE/2 * FMSIZE/2;
 	int sum;
 	// Convolution
 	for(fn = 0; fn < FILTNUM; fn++){
@@ -42,24 +42,24 @@ void convLayerCPU()
 		}
 	}
 
-	// Max Pooling with Window Size 3x3 and stride 3
+	// Max Pooling with Window Size 2x2 and stride 2
 	int max, tmpVal;
 	for(sli = 0; sli < FILTNUM; sli++){
-		for(fmy = 0; fmy < FMSIZE/3 ; fmy += 1){
-			for(fmx = 0; fmx < FMSIZE/3 ; fmx += 1){
-				outNeuIdx = sli*fmArea + fmy*3*FMSIZE + fmx*3;
+		for(fmy = 0; fmy < FMSIZE/2 ; fmy += 1){
+			for(fmx = 0; fmx < FMSIZE/2 ; fmx += 1){
+				outNeuIdx = sli*fmArea + fmy*2*FMSIZE + fmx*2;
 				max = outNeu[outNeuIdx];
-				for(y = 0; y < 3; y++){
-					for(x = 0; x < 3; x++){
-						ofmy = fmy*3 + y;
-						ofmx = fmx*3 + x;
+				for(y = 0; y < 2; y++){
+					for(x = 0; x < 2; x++){
+						ofmy = fmy*2 + y;
+						ofmx = fmx*2 + x;
 						outNeuIdx = sli*fmArea + ofmy*FMSIZE + ofmx;
 						tmpVal = outNeu[outNeuIdx];	
 						if(tmpVal > max)
 							max = tmpVal;
 					}
 				}
-				outIdx = sli*outArea + fmy*FMSIZE/3 + fmx;
+				outIdx = sli*outArea + fmy*FMSIZE/2 + fmx;
 				outCPU[outIdx] = max;
 			}
 		}
